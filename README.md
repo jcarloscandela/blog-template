@@ -15,19 +15,23 @@
 
 ## 📌 Table Of Contents
 
-1. [Demo](#-Demo)
-2. [CMS](#-Tina-CMS)
-3. [Features](#-Features)
-4. [Roadmap](#-Roadmap)
-5. [Stack](#-Stack)
-6. [Running locally](#-Running-Locally)
-7. [Configure](#-Configure)
-8. [Categories](#-Adding-a-category)
-9. [Posts](#-Adding-a-post)
-10. [Draft](#-Activating-draft-mode)
-11. [FrontMatter](#-Frontmatter)
-12. [CLI](#-Commands)
-13. [Contributors](#-Contributors)
+- [📌 Table Of Contents](#-table-of-contents)
+- [💻 Demo](#-demo)
+- [🦙 Tina CMS](#-tina-cms)
+- [💪 Features:](#-features)
+- [🛣️ Roadmap](#️-roadmap)
+- [⚙️ Stack](#️-stack)
+- [👨🏻‍💻 Running Locally](#-running-locally)
+- [📐 Configure](#-configure)
+- [🗂️ Adding a category](#️-adding-a-category)
+- [📄 Adding a post](#-adding-a-post)
+- [📝 Activating draft mode](#-activating-draft-mode)
+- [⚡️ Frontmatter](#️-frontmatter)
+- [Required properties:](#required-properties)
+- [Optional properties:](#optional-properties)
+- [🧞 Commands](#-commands)
+- [👋 Contributors](#-contributors)
+- [GIT Strategy](#git-strategy)
 
 ## 💻 Demo
 
@@ -212,9 +216,9 @@ All commands are run from the root of the project, from a terminal:
   <img src="https://contrib.rocks/image?repo=danielcgilibert/blog-template" />
 </a>
 
-# GIT Strategy
+## GIT Strategy
 
-Get list of remote origin repo
+Get list of remote origin repo. There is a remote origin repo by default, it's the fork of the original repo. There is another remote origin repo, called _release_, it's the private repo where the code is deployed.
 
 ```
 git remote -v
@@ -230,4 +234,10 @@ Push to remote origin repo
 
 ```
 git push <NAME> <BRANCH>
+```
+
+Example:
+
+```
+git push release release
 ```
