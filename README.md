@@ -211,3 +211,23 @@ All commands are run from the root of the project, from a terminal:
 <a href="https://github.com/danielcgilibert/blog-template/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=danielcgilibert/blog-template" />
 </a>
+
+# GIT Strategy
+
+Get list of remote origin repo
+
+```
+git remote -v
+```
+
+Add new remote origin repo
+
+```
+git remote add <NAME> <URL>
+```
+
+Push to remote origin repo
+
+```
+git push <NAME> <BRANCH>
+```
