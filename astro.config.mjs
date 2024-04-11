@@ -15,14 +15,21 @@ export default defineConfig({
 			wrap: true
 		}
 	},
+	i18n: {
+		defaultLocale: 'en',
+		locales: ['en', 'es'],
+		routing: {
+			prefixDefaultLocale: true
+		}
+	},
 	integrations: [
 		mdx({
 			syntaxHighlight: 'shiki',
 			shikiConfig: {
 				experimentalThemes: {
 					light: 'vitesse-light',
-					dark: 'material-theme-palenight',
-				  },
+					dark: 'material-theme-palenight'
+				},
 				wrap: true
 			},
 			drafts: true
