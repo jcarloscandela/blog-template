@@ -1,3 +1,4 @@
+import { languageKeys } from '@/i18n/ui.ts'
 import { CATEGORIES } from '../src/data/categories.ts'
 import { defineConfig } from 'tinacms'
 
@@ -72,6 +73,14 @@ export default defineConfig({
 						ui: {
 							component: 'tags'
 						}
+					},
+					{
+						type: 'string',
+						name: 'language',
+						required: true,
+						label: 'Language',
+						description: 'Select the language for this post',
+						options: [...languageKeys]
 					},
 					{
 						type: 'string',
