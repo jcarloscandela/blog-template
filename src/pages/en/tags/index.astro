@@ -2,7 +2,12 @@
 import BaseLayout from '@/layouts/BaseLayout'
 import TitlePage from '@/components/TitlePage'
 import { getTags } from '@/utils'
-const tags = await getTags('en')
+import { getLangFromUrl, useTranslatedPath } from '@/i18n/utils'
+
+const lang = getLangFromUrl(Astro.url)
+const translatePath = useTranslatedPath(lang)
+
+const tags = await getTags(lang)
 ---
 
 <BaseLayout title='Tags'>
@@ -11,7 +16,7 @@ const tags = await getTags('en')
 		{
 			tags.map((tag) => (
 				<a
-					href={`/tags/${tag}`}
+					href={translatePath(`/tags/${tag}`)}
 					class='inline-block bg-gray-200  rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'
 				>
 					#{tag}
