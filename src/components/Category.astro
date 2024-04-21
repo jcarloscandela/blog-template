@@ -1,20 +1,21 @@
 ---
-import { getLangFromUrl, useTranslatedPath } from '@/i18n/utils'
+import { getLangFromUrl, useTranslatedPath, useTranslations } from '@/i18n/utils'
 import { cn, sluglify } from '@/utils'
 
-const { name = 'View All', activeCategory } = Astro.props
+const { name = 'blog.viewAll', activeCategory } = Astro.props
 const currentPath = Astro.url.pathname
 const unsluglifyNameCategory = sluglify(name.toLowerCase())
 
 const isActive =
 	activeCategory?.toLocaleLowerCase() === unsluglifyNameCategory ||
-	(currentPath === '/' && name === 'View All')
+	(currentPath === '/' && name === 'blog.viewAll')
 const lang = getLangFromUrl(Astro.url)
 const translatePath = useTranslatedPath(lang)
+const t = useTranslations(lang)
 ---
 
 <a
-	href={name === 'View All'
+	href={name === 'blog.viewAll'
 		? '/'
 		: translatePath(sluglify(`/category/${unsluglifyNameCategory}/1`))}
 	class={cn(
@@ -23,5 +24,5 @@ const translatePath = useTranslatedPath(lang)
 			`border-black border-b-2 text-black z-10  dark:border-white dark:text-white dark:border-opacity-100 border-opacity-100`
 	)}
 >
-	{name}
+	{t(name)}
 </a>
