@@ -1,7 +1,11 @@
 ---
+import { getLangFromUrl, useTranslations } from '@/i18n/utils'
+
 const today = new Date()
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <footer class='flex justify-center items-center w-full px-16 h-28 border-t-2'>
-	&copy; {today.getFullYear()} Your Name. All rights reserved.
+	&copy; {today.getFullYear()} Your Name. {t('footer.reserved')}
 </footer>

@@ -1,4 +1,4 @@
-import { languageKeys } from '@/i18n/ui.ts'
+import { languageKeys } from '../src/i18n/ui.ts'
 import { CATEGORIES } from '../src/data/categories.ts'
 import { defineConfig } from 'tinacms'
 
