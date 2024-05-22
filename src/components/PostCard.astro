@@ -16,7 +16,7 @@ const t = useTranslations(lang)
 ---
 
 <article class='grid grid-rows-[300px_auto] md:grid-rows-[300px_220px] min-h-full group'>
-	<a class='relative overflow-hidden' href={`post/${slug}/`}>
+	<a class='relative overflow-hidden' href={`${lang}/post/${slug}`}>
 		<Image
 			src={heroImage}
 			width={600}
@@ -42,7 +42,7 @@ const t = useTranslations(lang)
 	<div class='flex justify-between flex-col gap-4 md:gap-0 py-6 pl-1'>
 		<div class='flex flex-col gap-3'>
 			<div class='flex flex-col gap-2'>
-				<a class='text-2xl font-semibold -tracking-wider' href={`/post/${slug}/`}>
+				<a class='text-2xl font-semibold -tracking-wider' href={`${lang}/post/${slug}`}>
 					{title}
 				</a>
 			</div>
@@ -56,7 +56,7 @@ const t = useTranslations(lang)
 
 		<footer class='flex justify-between items-center'>
 			<a
-				href={`/post/${slug}/`}
+				href={`${lang}/post/${slug}`}
 				class='flex justify-center items-center dark:text-white rounded-full hover:translate-x-1 transition-transform duration-150 ease-in-out font-semibold gap-1 group'
 				aria-label={`go to ${title}`}
 			>
