@@ -9,8 +9,12 @@ import { getPosts } from '@/utils'
 import SButton from '@/components/mdx/SButton'
 import Disqus from '@/components/Disqus'
 import { disqusConfig } from '@/data/disqus.config'
+import { getLangFromUrl, useTranslations } from '@/i18n/utils'
 
 const posts = await getCollection('blog')
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+
 export async function getStaticPaths() {
 	const posts = await getPosts('en')
 
@@ -62,7 +66,7 @@ const disqusEnabled = disqusConfig.enabled
 
 			<!-- related posts -->
 			<footer>
-				<h2 class='font-bold text-lg dark:text-white mb-6'>Related Posts</h2>
+				<h2 class='font-bold text-lg dark:text-white mb-6'>{t('blog.relatedPosts')}</h2>
 				<ListRelatedPosts posts={relatedPosts} />
 			</footer>
 		</article>
