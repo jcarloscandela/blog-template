@@ -22,7 +22,6 @@ export default defineConfig({
 			prefixDefaultLocale: true
 		}
 	},
-	trailingSlash: 'never',
 	integrations: [
 		mdx({
 			syntaxHighlight: 'shiki',
